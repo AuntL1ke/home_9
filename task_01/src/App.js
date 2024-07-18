@@ -1,19 +1,14 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Product from './components/Product';
+import Products from './components/product/Products';
+import Cart from './components/cart/Cart';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Cart
-        </p>
-      </header>
-
-      <div className="products">
-        <Product img="https://content.rozetka.com.ua/goods/images/big/24689398.jpg" name="Миша Bloody P91s USB Black" price="949₴"/>
-      </div>
-    </div>
+      <Routes>
+        <Route path="/" element={<Products/>} />
+        <Route path="/cart" element={<Cart/>} />
+      </Routes>
   );
 }
 
